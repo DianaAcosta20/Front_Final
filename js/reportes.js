@@ -1,6 +1,6 @@
 function traerReporteStatus(){
     $.ajax({
-        url:"http://localhost:8080/api/Reservation/report-status",
+        url:"http://138.2.225.105:8080/api/Reservation/report-status",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -27,7 +27,7 @@ function pintarRespuestaStatus(items){
 
 function trearReporteFechas(){
     $.ajax({
-        url:"http://localhost:8080/api/Reservation/report-dates/{dateOne}/{dateTwo}",
+        url:"http://138.2.225.105:8080/api/Reservation/report-dates/{dateOne}/{dateTwo}",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -54,7 +54,7 @@ function pintarRespuestaFechas(items){
 
 function traerReporteClientes(){
     $.ajax({
-        url:"http://localhost:8080/api/Reservation/report-clients",
+        url:"http://138.2.225.105:8080/api/Reservation/report-clients",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){

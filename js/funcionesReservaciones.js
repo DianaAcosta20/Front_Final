@@ -1,6 +1,6 @@
 function getReservaciones(){
     $.ajax({
-        url:"http://localhost:8080/api/Reservation/all",
+        url:"http://138.2.225.105:8080/api/Reservation/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -23,7 +23,7 @@ function postReservaciones(){
     console.log(cajas);
     
     $.ajax({
-        url:"http://localhost:8080/api/Reservation/save",
+        url:"http://138.2.225.105:8080/api/Reservation/save",
         type:"POST",
         datatype:"JSON",
         contentType: "application/json; charset=utf-8",
@@ -48,7 +48,7 @@ function deleteReservaciones(){
 
 function getReservaciones_Car(){
     $.ajax({
-        url:"http://localhost:8080/api/Car/all",
+        url:"http://138.2.225.105:8080/api/Car/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -65,7 +65,7 @@ function getReservaciones_Car(){
 
 function getReservaciones_Client(){
     $.ajax({
-        url:"http://localhost:8080/api/Client/all",
+        url:"http://138.2.225.105:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){

@@ -1,6 +1,6 @@
 function getCar(){
     $.ajax({
-        url:"http://localhost:8080/api/Car/all",
+        url:"http://138.2.225.105:8080/api/Car/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -27,7 +27,7 @@ function postCar(){
     console.log(cajas);
 
     $.ajax({
-        url:"http://localhost:8080/api/Car/save",
+        url:"http://138.2.225.105:8080/api/Car/save",
         type:"POST",
         datatype:"JSON",
         contentType: "application/json; charset=utf-8",
@@ -59,7 +59,7 @@ let cajas = {
 };
 
 $.ajax({
-    url:"http://localhost:8080/api/Car/update",
+    url:"http://138.2.225.105:8080/api/Car/update",
     type:"PUT",
     datatype:"JSON",
     contentType: "application/json",
@@ -80,7 +80,7 @@ function deleteCar(idBoton){
         id:idBoton
     };
     $.ajax({
-        url:"http://localhost:8080/api/Car/"+idBoton,
+        url:"http://138.2.225.105:8080/api/Car/"+idBoton,
         type:"DELETE",
         datatype:"JSON",
         data:JSON.stringify(myData),
@@ -128,7 +128,7 @@ function pintarRespuesta(items){
 
 function getGamaRelacion(){
     $.ajax({
-        url:"http://localhost:8080/api/Gama/all",
+        url:"http://138.2.225.105:8080/api/Gama/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
