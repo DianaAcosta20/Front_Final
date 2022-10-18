@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/funcionesMensajes.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <nav class="bg-gradient-to-r from-indigo-800 to-stone-900">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                  </div>
+                  <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                      <a href="index.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Inicio</a>
+        
+                      <a href="gama.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Gamas</a>
+        
+                      <a href="car.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Carros</a>
+        
+                      <a href="clientes.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Clientes</a>
+        
+                      <a href="reservaciones.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reservaciones</a>
+
+                      <a href="reportes.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reportes</a>
+                    </div>
+                  </div>
+                </div>
+
+            </div> 
+        </nav>
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+            <span class="block text-indigo-600 xl:inline">Mensajes</span>
+        </h1>
+
+        <main class="mx-auto mt-10 max-w-9xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-5">
+          <section class="text-gray-400 bg-gray-900 body-font">
+              <div class="container px-5 py-24 mx-auto">
+              <div class="flex flex-col text-center w-full mb-12">
+                  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Crear Mensaje</h1></div>
+                  <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0 items-end sm:space-x-4 sm:space-y-0 space-y-4">
+                      <div class="relative sm:mb-0 flex-grow w-full">
+                          <label for="full-name" class="leading-7 text-sm text-gray-400">Mensaje</label>
+                          <input type="text" id="messageText" name="messageText" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                      </div>
+                  </div>
+                  <div class="mt-5 sm:mt-4 sm:flex sm:justify-center lg:justify-start">
+                  </div>
+                  <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0 items-end sm:space-x-4 sm:space-y-0 space-y-4">
+                      <div class="relative sm:mb-0 flex-grow w-full">
+                          <label for="full-name" class="leading-7 text-sm text-gray-400">Carro</label>
+                          <select id="select-car" name="select-car" class=" w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-outrounded border border-gray-700 focus:ring-2 focus:ring-indigo-100 appearance-none py-2 focus:outline-none focus:border-indigo-500 text-gray-600 pl-3 pr-10"></select>
+                      </div>
+                      <div class="relative sm:mb-0 flex-grow w-full">
+                          <label for="full-name" class="leading-7 text-sm text-gray-400">Cliente</label>
+                          <select id="select-client" name="select-client" class=" w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-outrounded border border-gray-700 focus:ring-2 focus:ring-indigo-100 appearance-none py-2 focus:outline-none focus:border-indigo-500 text-gray-600 pl-3 pr-10"></select>
+                      </div>
+                      <button stily="top: rigth" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" onclick="postMensajes()">Crear</button>
+                  </div>
+                  <div class="mt-5 sm:mt-5 sm:flex sm:justify-center lg:justify-start">
+                  </div>
+              </div>
+          </section>
+          
+          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+          </div>
+
+         
+        </main>
+        <script type="text/javascript">
+            window.onload = getMensajes_Car();
+        </script>
+
+        <script type="text/javascript">
+            window.onload = getMensajes_Client();
+        </script>
+
+
+       
+
+        <script type="text/javascript">
+            window.onload = getMensajes();
+        </script>
+
+        
+    </body>
+</html>
